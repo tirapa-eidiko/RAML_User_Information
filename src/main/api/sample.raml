@@ -1,0 +1,19 @@
+#%RAML 0.8
+title: Sample API
+
+baseUri: https://www.tirapareddy.com:8081/api
+
+documentation:
+  - title: Home Page for Sample API
+    content: |
+      This example documentation forms part of a tutorial for a 
+      [RAML Turorial](https://docs.mulesoft.com/api-manager/design-raml-api-task) article.
+      
+/userInfo/{id}:
+  get:
+    description: Retrieves details of a particular users
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include user-example.json
